@@ -4,7 +4,7 @@ from app.routes import home, dashboard, api
 from app.utils import filters
 
 def create_app(test_config=None):
-  # set up app config
+  # set up app config, in production change super secret key to harder to guess string
   app = Flask(__name__, static_url_path='/')
   app.url_map.strict_slashes = False
   app.config.from_mapping(
